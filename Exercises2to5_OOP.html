@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises#2#3#4#5_ OOP</title>
+</head>
+<body>
+    <div id="printhere"></div>
+    <script>
+        var persons = [
+            { fname: 'John', lname: 'Hob' , age: 35 },
+            { fname: 'Alex', lname: 'Mercer', age: 25 },
+            { fname: 'Alice', lname: 'Zaheer' , age: 24 },
+            { fname: 'Zues', lname: 'Odin' , age: 55 },
+            { fname: 'Soso', lname: 'Al-Amora' , age: 67 }
+        ];
+        var i=0;
+        function tellmeyourname(){
+            while(i<=persons.length){
+                console.log(persons[i].fname)
+                i++
+            }
+            }
+        
+        function avgage(){
+            var i=0;
+            var avg_age=0;
+            var tot_age=0;
+            while(i<=persons.length){
+                let y = Number(persons[i].age);
+                tot_age+=y;
+                avg_age=tot_age/(i+1)
+                i++
+                document.getElementById("printhere").innerHTML=avg_age;
+            }     
+        }
+
+        function olderPerson(){
+            var i=0;
+            var latestage=0;
+            while(i<=persons.length){
+                let z = Number(persons[i].age);
+                let theoldestfname= persons[i].fname;
+                let theoldestlname= persons[i].lname;
+
+
+                if(latestage<=z){
+                    latestage=z;
+                    i++
+                    document.getElementById("printhere").innerHTML=theoldestfname+" "+theoldestlname
+                    continue;
+                }
+                else{
+                    i++
+                    continue;
+                }
+            }
+        }
+
+        function longestName(){
+            var i=0;
+            let thebiggestname="";
+            while(i<=persons.length){
+                let thefname= persons[i].fname;
+                let thelname= persons[i].lname;
+                let thefullname=thefname+thelname;
+                if (thefullname.length > thebiggestname.length){
+                    thebiggestname=thefullname;
+                    i++;
+                    document.getElementById("printhere").innerHTML=thebiggestname;
+                    continue;
+                }
+                else{
+                    i++;
+                    continue;
+                }
+            }   
+
+        }
+
+        longestName();
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
