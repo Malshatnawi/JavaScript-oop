@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#1 OOP / Creating Object that represents me</title>
+</head>
+<body>
+
+    <script>
+        class About{
+            constructor(fname, lname, age, dob, favfood, favfilms){
+                this.fname=fname;
+                this.lname=lname;
+                this.age=age;
+                this.dob=dob;
+                this.favfood=favfood;
+                this.favfilms=favfilms;
+                
+            }
+            favfood(fname){
+                return Array(this.favfood)
+            }
+            favfilms(fname){
+                return Array(this.favfilms)
+            }
+        
+        }
+
+        let x =["Mansaf","Fasoolya","Chinese"];
+        let y =["Film1","Film2","Film3","Film4","Film5"];
+        let Mohammed = new About ("Mohammed", "Ismail", "24" , "12/01" ,x, y )
+        console.log(Mohammed);
+    </script>
+    
+</body>
+</html>
